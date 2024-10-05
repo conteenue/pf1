@@ -1,0 +1,197 @@
+@media screen and (max-width:768px){
+    header div.wrap nav h1 a{
+    width: 140px;
+    }
+    header div.wrap nav ul.gnb{
+       display: none;
+    }
+    header div.wrap nav ul.enb{
+        display: flex;
+      }
+    header div.wrap nav button.ham{
+      display: initial;
+    }
+  aside{
+    
+  top: 40px;
+  left: 470px;
+    }
+  .asideshow{
+    
+  left: 300px;
+  }
+    .wrap{
+      padding: 0 20px;
+    }
+    .h1{
+    font-size: calc(48px * 0.6);
+    }
+    div#title div.wrap p{
+    font-size: calc(19px * 0.6);
+    }
+    section::before{
+    
+    font-size: 80px;
+     }
+    /*  어바웃미  */
+  #aboutme{
+  height: auto;
+  }
+  #aboutme div.wrap{
+  grid-template-columns: auto auto;
+  grid-template-rows: auto 1fr auto auto;
+  row-gap: 0;
+  column-gap: 10px;
+  }
+  #aboutme div.wrap h2{
+  font-size: 50px;
+  top: 30px;
+  margin-bottom: 20px;
+  }
+  #aboutme div.wrap figure{
+  grid-column: 1;
+  grid-row: 2 / span 4;
+  align-self: center;
+  width: 200px;
+  height: 300px;
+  }
+  #aboutme div.wrap ul.intro{
+  grid-column: 2;
+  grid-row: 3;
+  }
+  #aboutme div.wrap ul.intro li{
+  flex-direction: column;
+  }
+  #aboutme div.wrap ul.intro li:nth-child(1){
+  margin-bottom: 10px;
+  width: fit-content;
+  height: fit-content;
+  }
+  #aboutme div.wrap ul.intro li h3{
+  width: 80px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  }
+  #aboutme div.wrap ul.intro li:first-child h3{
+    font-size: 0;
+  }
+  #aboutme div.wrap ul.intro li:first-child h3::before{
+    display: none;
+  }
+  #aboutme div.wrap ul.intro li p{
+    
+  /*! padding-top: 114px; */
+  margin-bottom: 20px;
+  font-size: 14px;
+  }
+  #aboutme div.wrap ul.intro li:nth-child(1) p{
+    
+  /*! padding-top: 114px; */
+  margin-bottom: 20px;
+  font-size: 13px;
+  margin-top: 80px;
+  }
+  #aboutme div.wrap ul.info{
+  grid-column: 2;
+  grid-row: 5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  }
+  #aboutme div.wrap ul.info li:nth-child(1){
+    
+  }
+  #aboutme div.wrap ul.info li:nth-child(2){
+    
+  grid-column: 1;
+  grid-row: 2;
+  }
+  #aboutme div.wrap ul.info li:nth-child(3){
+    
+  }
+  #aboutme div.wrap ul.info li:not(:last-child) strong{
+    display: none;
+  }
+/*  스킬  */
+  #skill{
+    
+  width: 450px;
+  height: auto;
+  }
+  #skill div.wrap{
+    
+  }
+  #skill div.wrap h2{
+    
+  font-size: 40px;
+  }
+  #skill div.wrap ul.list{
+    
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 20px;
+  }
+  #skill div.wrap ul.list > li{
+    width: 50%;
+    
+  }
+  #skill div.wrap ul.list > li:nth-child(1){
+    
+  grid-column: 1;
+  grid-row: 1;
+  }
+  #skill div.wrap ul.list > li:nth-child(2){
+    
+  grid-column: 1;
+  grid-row: 2;
+  justify-content: left;
+  }
+  #skill div.wrap ul.list > li:nth-child(3){
+    
+  grid-column: 1;
+  grid-row: 3;
+  }
+  #skill div.wrap ul.list > li:nth-child(4){
+    
+  grid-column: 1;
+  grid-row: 4;
+  }
+  #skill div.wrap ul.list > li:nth-child(5){
+  grid-column: 1;
+  grid-row: 5;
+  }
+  #skill div.wrap ul.list > li:nth-child(1) ul.sub{
+    
+  }
+  #skill div.wrap ul.list > li:nth-child(1) ul.sub li strong::after, #skill div.wrap ul.list > li:nth-child(2) ul.sub li strong::after, #skill div.wrap ul.list > li:nth-child(3) ul.sub li strong::after{
+    
+  }
+/*  포트폴리오  */
+  #portfolio div.wrap ul.list li figure img{
+    
+  }
+  #portfolio div.wrap ul.list li figure::after{
+    
+  }
+/* 프로세스  */
+  #process div.wrap{
+    
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr auto auto;
+  column-gap: 30px;
+  }
+  #process div.wrap h2{
+    
+  grid-column: 1;
+  grid-row: 2;
+  font-size: 30px;
+  }
+  #process div.wrap p{
+    
+  }
+  #process div.wrap h3{
+    
+  grid-column: 1;
+  grid-row: 4;
+  }
+}
