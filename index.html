@@ -1,525 +1,548 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>성은's 포트폴리오</title>
+    <title>The-K한국교직원공제회 개인</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/common.css">
     <!-- 구글폰트 -->
-    <link rel="preconnect" href="https//fonts.googleapis.com">
-    <link rel="preconnect" href="https//fonts.gstatic.com" crossorigin>
-    <link href="https//fonts.googleapis.com/css2?family=Noto+Sans+KRwght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <script src="js/jquery-3.7.0.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- <script>
-        $(document).ready(function(){
-            $('.titleani').slick({
-             slidesToShow: 1,
-             slidesToScroll: 1,
-             autoplay: false,
-             autoplaySpeed: 2000,
-             dots: true,
-             infinite: false,
-             speed: 500,
-             cssEase: 'ease-out',
-             arrows: true,
-             fade: false
-            });
-            $('.snsani').slick({
-             slidesToShow: 3,
-             slidesToScroll: 3,
-             autoplay: true,
-             autoplaySpeed: 2000,
-             dots: true,
-             infinite: true,
-             speed: 500,
-            });
-        });
-    </script> -->
-    <script>
-        $(document).ready(function(){
-            $('.pfAni').slick({
-             slidesToShow: 2,
-             slidesToScroll: 1,
-             autoplay: true,
-             autoplaySpeed: 2000,
-             dots: true,
-             infinite: true,
-             speed: 500,
-             cssEase: 'ease-out',
-             arrows: true,
-             fade: false
-            });
-            
-        });
-    </script>
-    <script>
-        $(document).ready(function(){
-            // $("aside").addClass("asideshow");
-            $("aside button").click(function(){
-                $("aside").toggleClass("asideshow");
-            });
-            // 컨텐츠의 위치값 확인하기
-                var c1 = $("#aboutme").offset().top; //어바웃미의 높이 위치 값을 구해서 c1 변수에 넣어라.
-                console.log (c1); // c1의 담긴 값을 콘솔창에 표시해라.
-                var c2 =  $("#skill").offset().top;
-                console.log (c2);
-                var c3 =  $("#portfolio").offset().top;
-                console.log (c3);
-                var c4 =  $("#process").offset().top;
-                console.log (c4);
-                var c5 =  $("#contact").offset().top;
-                console.log (c5);
-                var c6 =  $("footer").offset().top;
-            // 대메뉴 클릭 시 해당 컨텐츠로 페이지 슬라이딩
-            $("header div.wrap nav ul.gnb li:nth-child(1),aside li:nth-child(1)").click(function(){
-                // $("html,body").animate({scrollTop:"400px"},1000);
-                $("html,body").animate({scrollTop:c1},1000);
-                return false; // a태그가 있는 경우에 새로고침으로 명령어 실행할 시간이 없어서 작동이 안됨
-               });
-            $("header div.wrap nav ul.gnb li:nth-child(2),aside li:nth-child(2)").click(function(){
-                $("html,body").animate({scrollTop:c2},1000);
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.7.1.js"></script>
+    <script type="text/javascript">
+         $(document).ready(function(){
+            $("main section#product div.wrap div:not(:nth-of-type(1))").hide();
+           $("main section#product div.wrap ul.list li a.block").click(
+            function(){
+                $(this).addClass("current");
+                $("main section#product div.wrap ul.list li a.block").not(this).removeClass("current");
                 return false;
+            }
+           );
+          //#product안의 .첫번째 li a를 클릭하면 실행하시오 (금융상품)
+          $("main section#product div.wrap ul.list li:nth-child(1) a.block").click(function(){
+                //#product안의 첫번째 div를 보이게 하시오 show()
+                $("main section#product div.wrap div:nth-of-type(1)").show();
+                $("main section#product div.wrap div:not(:nth-of-type(1))").hide();
+            }); 
+            //#product안의 .두번째 li a를 클릭하면 실행하시오
+            $("main section#product div.wrap ul.list li:nth-child(2) a.block").click(function(){
+                //#product안의 첫번째 div를 보이게 하시오 show()
+                $("main section#product div.wrap div:nth-of-type(2)").show();
+                $("main section#product div.wrap div:not(:nth-of-type(2))").hide();
             });
-            $("header div.wrap nav ul.gnb li:nth-child(3),aside li:nth-child(3)").click(function(){
-                $("html,body").animate({scrollTop:c3},1000);
-                return false;
+            $("main section#product div.wrap ul.list li:nth-child(3) a.block").click(function(){
+                
+                $("main section#product div.wrap div:nth-of-type(3)").show();
+                $("main section#product div.wrap div:not(:nth-of-type(3))").hide();
             });
-            $("header div.wrap nav ul.gnb li:nth-child(4),aside li:nth-child(4)").click(function(){
-                $("html,body").animate({scrollTop:c4},1000);
-                return false;
+            $("main section#product div.wrap ul.list li:nth-child(4) a.block").click(function(){
+                
+                $("main section#product div.wrap div:nth-of-type(4)").show();
+                $("main section#product div.wrap div:not(:nth-of-type(4))").hide();
             });
-            $("header div.wrap nav ul.gnb li:nth-child(5),aside li:nth-child(5)").click(function(){
-                $("html,body").animate({scrollTop:c5},1000);
-                return false;
+            /* 로그인 */
+            $("aside div.login div.id").hide();
+            $("aside div.login span button:nth-child(2)").click(function(){
+                $("aside div.login div.id").show();
+                $("aside div.login div.in").hide();
             });
-             // top 버튼 추가하기
-           $('footer').prepend('<a href="#" class="top">Top</a>');
-           $("footer a.top").click(function(){
-            $("html,body").animate({scrollTop:0},1500);
-           });
-        });
-    </script>
-    <script>
-        document.getElementById('ssd')
-    </script>
-      <!-- 유튜브영상배경으로 -->
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.4/css/jquery.mb.YTPlayer.min.css">
-      <!-- <script src="https://code.jquery.com/jquery-latest.min.js"></script> -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.4/jquery.mb.YTPlayer.min.js"></script>
-      <script>
-        jQuery( function() {
-         jQuery( '#background' ).YTPlayer();
-        });
-    </script>
-    <style>
-        #background {
-             z-index: -1;
-             /* position: absolute; */
-             opacity: 0.8;
-        }
+            $("aside div.login span button:nth-child(1)").click(function(){
+                $("aside div.login div.in").show();
+                $("aside div.login div.id").hide();    
 
-    </style>
+            });
+            //로그인
+            $("aside div.login span button").click(function(){
+                $(this).addClass("bold current-login");
+                $("aside div.login span button").not(this).removeClass("bold current-login");
+            });
+
+
+
+        });
+    </script>
+   <!-- 슬릭 -->
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   <script>
+       $(document).ready(function(){
+           $('.titleAni').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 2000,
+            dots: true,
+            infinite: true,
+            speed: 500,
+            cssEase: 'ease-out',
+            arrows: true,
+            fade: false
+           });
+        //    하나의 버튼으로 두개의 slick연동하기
+           $('.serviceAni').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 2000,
+            dots: false,
+            infinite: false,
+            speed: 500,
+            cssEase: 'ease-out',
+            arrows: false,
+            fade: true,
+            asNavFor: '.serviceAni2'
+           });
+           $('.serviceAni2').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 2000,
+            dots: true,
+            infinite: true,
+            speed: 500,
+            cssEase: 'ease-out',
+            arrows: true,
+            fade: false,
+            asNavFor: '.serviceAni'
+           });
+     // 버튼 클릭 이벤트로 두 슬라이더 동기화
+            $('.serviceAni2 .slick-next').on('click', function() {
+                $('.serviceAni').slick('slickNext');
+                $('.serviceAni2').slick('slickNext');
+            });
+
+            // 타이틀 도트대신 1/3식으로 표시하기
+            let num= $("#title .slick-dots li").length; //요소의 총갯수 가져옴
+            let current = $("#title ul li.slick-active").index();
+            // 변수키워드 변수명 = 값;
+            // let num (*num은 변수이다, = 넣어라(대입연산자))
+            // 변수는 그릇, 데이터가 담긴다, 데이터의 종류는 문자열 데이터, 숫자 데이터
+            // 변수는 단축키(줄임말)
+
+            $("#title").append('<span class="number"><strong>'+(current+1)+'</strong>/'+num+'</span>');
+
+            // 문자열과 변수 연결하기 "문자열"+변수명+"문자열"
+            // $("#title").prepend('<span class="number"><strong></strong>/'+num+'</span>');
+
+            // next버튼 클릭 시 숫자 증가 처리
+            $('#title .slick-next,#title .slick-prev').click(function(){
+                current = $("#title ul li.slick-active").index();
+                $("#title span.number strong").text(current+1);
+            });
+        });
+   </script>
 </head>
 <body>
+    
     <!-- 상단영역 -->
-    <header>
-        <div class="wrap">
-            <nav class="flex">
-                <h1><a href="" class="block">KSE' Portfolio</a></h1>
-                <ul class="gnb flex">
-                    <li><a href="" class="block h5">About Me</a></li>
-                    <li><a href="" class="block h5">Skill&Tools</a></li>
-                    <li><a href="" class="block h5">Portfolio</a></li>
-                    <li><a href="" class="block h5">Work Process</a></li>
-                    <li><a href="" class="block h5">Contact</a></li>
-                </ul>
-                <ul class="enb flex">
-                    <li><a href="" class="block h6">Notion</a></li>
-                    <li><a href="" class="block h6">카톡</a></li>
-                    <li><a href="" class="block h6">menu</a></li>
-
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <aside>
-        <button class="close">KO</button>
-        <h2 class="h4">메뉴</h2>
-        <ul>
-            <li><a href="" class="block">자기소개</a></li>
-            <li><a href="" class="block">스킬</a></li>
-            <li><a href="" class="block">포트폴리오</a></li>
-            <li><a href="" class="block">워크프로세스</a></li>
-            <li><a href="" class="block">컨택</a></li>
+    <div id="header" class="wrap">
+        <h1><a href="">The-K한국교직원공제회</a></h1>
+        <ul class="etc">
+            <li><a href="">개인</a></li>
+            <li><a href="">법인</a></li>
         </ul>
-    </aside>
+        <ul class="gnb">
+            <li><a href="">공제회 소개</a></li>
+            <li><a href="">로그인</a></li>
+            <li><a href="">회원가입</a></li>
+            <li><a href="">인증센터</a></li>
+        </ul>
+        <ul class="mainmenu">
+            <li><a href="">마이페이지</a></li>
+            <li><a href="">금융상품</a></li>
+            <li><a href="">이벤트·복지</a></li>
+            <li><a href="">고객센터</a></li>
+            <li><a href="">인증센터</a></li>
+        </ul>
+        <span class="rightmenu">
+            <button>검색</button>
+            <button>팝업 열기</button>
+        </span>
+    </div>
     <!-- 타이틀영역 -->
-    <div id="title">
-        <div class="wrap">
-            <h2 class="h1 bold">A Collection of My Journey</h2>
-            <p class="h4">UI & UX DESIGNER PORTFOLIO</p>
-        </div>
-        <div id="background" class="player" data-property="{
-            videoURL: 'https://youtu.be/CqaOiBfATsY',
-            mute: true,
-            showControls: false,
-            useOnMobile: true,
-            quality: 'highres',
-            containment: 'body',
-            loop: true,
-            autoPlay: true,
-            stopMovieOnBlur: false,
-            startAt: 0,
-            opacity: 1
-            }">
+    <div id="wtitle" class="wrap paddingT50 paddingB50">
+        <!-- 타이틀 영역 -->
+        <div id="title" class="titleAni">
+            <article class="title1">
+                <h2 class="h1 bold">2024년 제1차 북&JOY 도서증정 행사</h2>
+                <p>총 12,000명의 회원분께 본회가 선정한 도서 중 희망하시는 도서를 드립니다.</p>
+                <ul>
+                <li>응모기간 : 2024. 04. 12.(금) ~ 2024. 04. 22.(월)</li>
+                <li>당첨발표 : 2024. 04. 26.(금)</li>
+                </ul>
+                <a href="">자세히 보기 </a>
+            </article>
+            <article class="title2">
+                <h2 class="h1 bold">2024년 제1차 북&JOY 도서증정 행사</h2>
+                <p>총 12,000명의 회원분께 본회가 선정한 도서 중 희망하시는 도서를 드립니다.</p>
+                <ul>
+                <li>응모기간 : 2024. 04. 12.(금) ~ 2024. 04. 22.(월)</li>
+                <li>당첨발표 : 2024. 04. 26.(금)</li>
+                </ul>
+                <a href="">자세히 보기 </a>
+            </article>
+            <article class="title3">
+                <h2 class="h1 bold">2024년 제1차 북&JOY 도서증정 행사</h2>
+                <p>총 12,000명의 회원분께 본회가 선정한 도서 중 희망하시는 도서를 드립니다.</p>
+                <ul>
+                <li>응모기간 : 2024. 04. 12.(금) ~ 2024. 04. 22.(월)</li>
+                <li>당첨발표 : 2024. 04. 26.(금)</li>
+                </ul>
+                <a href="">자세히 보기 </a>
+            </article>
+            <article class="title3">
+                <h2 class="h1 bold">2024년 제1차 북&JOY 도서증정 행사</h2>
+                <p>총 12,000명의 회원분께 본회가 선정한 도서 중 희망하시는 도서를 드립니다.</p>
+                <ul>
+                <li>응모기간 : 2024. 04. 12.(금) ~ 2024. 04. 22.(월)</li>
+                <li>당첨발표 : 2024. 04. 26.(금)</li>
+                </ul>
+                <a href="">자세히 보기 </a>
+            </article>
         </div>
     </div>
-    <div class="box">
-        <div class="loader1"></div>
-        <p>Loader 1</p>
-    </div>
-    <!-- 메인 -->
-    <section id="aboutme">
-        <div class="wrap paddingT50 paddingB50 grid">
-            <h2 class="h2 borderT bold">About Me</h2>
-            <figure>
-                <img src="img/profile.jpg" alt="김성은 정면사진">
-                <figcaption>김성은</figcaption>
-            </figure>
-            <ul class="intro">
-                <li>
-                    <h3 class="h6 bold">Information</h3>
-                    <p class="h6">김성은 1995년생 경기도 오산 거주
-                       </p>
-                </li>
-                <li>
-                    <h3 class="h6 bold">Objective</h3>
-                    <p class="p15">사용자 경험을 개선하고, 창의적인 웹 솔루션을 제공하는 웹디자이너(또는 웹퍼블리셔)가 되는 것을 목표로 하고 있습니다.</p>
-                </li>
-                <li>
-                    <h3 class="h6 bold">Motivation And Passion</h3>
-                    <p class="p15">웹디자인(또는 웹퍼블리싱)에 대한 관심은 [개인적인 경험이나 계기]에서 시작되었습니다. 학원에서 배운 기술과 지식을 바탕으로, 더 나은 웹 환경을 만드는 데 기여하고자 합니다.</p>
-                </li>
-            </ul>
-            <ul class="info">
-                <li><a href="mailto:q2q21357@naver.com"><strong>이메일</strong>q2q21357@naver.com</a></li>
-                <li><a href="tel:+821012345678"><strong>전화번호</strong>+82-10-5642-0879</a></li>
-                <li><a href="https://github.com/zlzltjddms"><strong>GitHub 프로필</strong></a></li>
-            </ul>
-        </div>
-    </section>
-    <section id="skill">
-        <div class="wrap paddingT50 paddingB50 flex">
-            <h2 class="h2 borderT bold">Skill&Tools</h2>
-            <ul class="list grid">
-                <li>
-                    <h3 class="h3">프론트엔드</h3>
-                    <ul class="sub flex">
-                        <li class="p15"><strong class="bold">HTML5 </strong><i class="block">중급</i> </li>
-                        <li class="p15"><strong class="bold">CSS3 </strong><i class="block">중급</i> </li>
-                        <li class="p15"><strong class="bold">JavaScript </strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">jQuery </strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">반응형 웹디자인 </strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">웹표준 </strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">웹접근성 </strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">웹폰트 </strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">웹아이콘 </strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">SVG </strong><i class="block">중급</i></li>
-                    </ul>
-                </li>
-                <li>
-                    <h3 class="h3">프레임워크 및 <span class="block"></span>라이브러리</h3>
-                    <ul class="sub flex">
-                        <li class="p15"><strong class="bold">Vue.js</strong><i class="block">초급</i></li>
-                        <li class="p15"><strong class="bold">Bootstrap</strong><i class="block">중급</i></li>
-                    </ul>
-                </li>
-                <li>
-                    <h3 class="h3">디자인 Tools</h3>
-                    <ul class="sub flex">
-                        <li class="p15"><strong class="bold">포토샵</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">일러스트</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">Figma</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">Kakao Oven</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">Balsamiq</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">Almind</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">프리미어</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">애프터이펙스</strong><i class="block">중급</i></li>
-                    </ul>
-                </li>
-                <li>
-                    <h3 class="h3">버전 관리 및 협업 도구</h3>
-                    <ul class="sub flex">
-                        <li class="p15"><strong class="bold">Git</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">GitHub</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">Google Drive</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">Firefox <span class="block"></span> 개발자도구</strong><i class="block">중급</i></li>
-                    </ul>
-                </li>
-                <li>
-                    <h3 class="h3">기타 도구 및 기술</h3>
-                    <ul class="sub flex">
-                        <li class="p15"><strong class="bold">VS Code</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">Atom <span class="block"></span>Editor</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">Emmet <span class="block"></span> (Zen Coding)</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">Sass</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">웹사이트 <span class="block"></span> 최적화</strong><i class="block">중급</i></li>
-                        <li class="p15"><strong class="bold">검색엔진 <span class="block"></span> 최적화 (SEO)</strong><i class="block">중급</i></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!-- Portfolio  -->
-    <section id="portfolio">
-        <div class="wrap paddingT50 paddingB50 flex">
-            <h2 class="h2 borderT bold">Portfolio</h2>
-            <p>"아래 작품들은 제가 학원에서 수료하는 동안 진행한 다양한 웹디자인 및 웹퍼블리싱 프로젝트들입니다. <span class="block"></span>
-                각 프로젝트는 최신 기술과 디자인 트렌드를 반영하여 제작되었으며, 실무에서의 적용 가능성을 염두에 두고 개발되었습니다."
-            </p>
-            <ul class="list pfAni">
-                <li class="grid pfAni-1">
-                    <div>
-                        <h3 class="h3 bold">Project 1. 공제회 홈페이지</h3>
-                        <figure>
-                            <img src="img/pf1.png" alt="공제회홈페이지">
-                            <figcaption>공제회 홈페이지</figcaption>
-                        </figure>
-                        <ul class="sub">
-                            <li><strong class="bold">개요</strong>온라인 쇼핑몰 사이트 디자인 및 퍼블리싱</li>
-                            <li><strong class="bold">역할</strong>전체 디자인 및 프론트엔드 퍼블리싱</li>
-                            <li><strong class="bold">사용한 기술</strong>HTML5, CSS3, JavaScript, jQuery, Bootstrap</li>
-                            <li class="work">
-                                <strong class="bold">작업 과정</strong>
-                                <ul>
-                                    <li>아이디어 구상 및 컨셉 설정</li>
-                                    <li>와이어프레임 및 디자인 시안 제작</li>
-                                    <li>HTML/CSS로 레이아웃 구현</li>
-                                    <li>JavaScript/jQuery로 동적 요소 추가</li>
-                                    <li>반응형 디자인 구현</li>
-                                </ul>
-                            </li>
-                            <li><strong class="bold">기여도</strong>80% (디자인, 퍼블리싱 및 테스트)</li>
-                            <li class="flex"><a href="https://github.com/zlzltjddms/pf1" class="block b-medium rounded border1">깃허브 소스보기</a><a href="https://zlzltjddms.github.io/pf-1/" class="block b-medium blue rounded">작품보기</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="pfAni-2">
-                    <div>
-                        <h3 class="h3 bold">Project 2. 알툴즈 홈페이지</h3>
-                        <figure>
-                            <img src="img/pf2.png" alt="알툴즈홈페이지">
-                            <figcaption>알툴즈 홈페이지</figcaption>
-                        </figure>
-                        <ul class="sub">
-                            <li><strong class="bold">개요</strong>개인 포트폴리오 사이트 디자인 및 퍼블리싱</li>
-                            <li><strong class="bold">역할</strong>전체 디자인 및 프론트엔드 퍼블리싱</li>
-                            <li><strong class="bold">사용한 기술</strong>HTML5, CSS3, JavaScript, React</li>
-                            <li class="work">
-                                <strong class="bold">작업 과정</strong>
-                                <ul>
-                                    <li>컨셉 설정 및 아이디어 스케치</li>
-                                    <li>와이어프레임 및 프로토타입 제작</li>
-                                    <li>React를 사용한 컴포넌트 기반 개발</li>
-                                    <li>CSS3로 스타일링 및 애니메이션 추가</li>
-                                    <li>반응형 디자인 적용</li>
-                                </ul>
-                            </li>
-                            <li><strong class="bold">기여도</strong>100% (단독 프로젝트)</li>
-                            <li class="flex"><a href="https://github.com/zlzltjddms/pf2" class="block b-medium rounded border1">깃허브 소스보기</a><a href="https://zlzltjddms.github.io/pf2/" class="block b-medium blue rounded">작품보기</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="pfAni-3">
-                <div>
-                    <h3 class="h3 bold">project 3. 하이트진로</h3>
-                    <figure>
-                        <img src="img/pf-3.png" alt="하이트진로">
-                        <figcaption>작업내용보기</figcaption>
-                    </figure>
-                    <ul class="sub">
-                        <li><strong class="bold">개요</strong>블로그 플랫폼 디자인 및 퍼블리싱</li>
-                        <li><strong class="bold">역할</strong>전체 디자인 및 프론트엔드 퍼블리싱</li>
-                        <li><strong class="bold">사용한 기술</strong>HTML5, CSS3, JavaScript, Vue.js</li>
-                        <li class="work">
-                            <strong class="bold">작업 과정</strong>
-                            <ul>
-                                <li>사용자 요구 분석 및 기능 정의</li>
-                                <li>와이어프레임 및 초기 디자인 시안 제작</li>
-                                <li>Vue.js를 사용한 컴포넌트 기반 개발</li>
-                                <li>CSS3로 스타일링 및 레이아웃 구성</li>
-                                <li>반응형 디자인 구현</li>
-                            </ul>
-                        </li>
-                        <li><strong class="bold">기여도</strong>90% (디자인, 퍼블리싱 및 테스트)</li>
-                        <li class="flex"><a href="https://github.com/zlzltjddms/pf3" class="block b-medium rounded border1">깃허브 소스보기</a><a href="https://zlzltjddms.github.io/pf3/" class="block  b-medium blue rounded">작품보기</a></li>
-                    </ul>
+    <!-- 주요정보 -->
+    <main>
+        <!-- 추천금용상품 -->
+        <section id="product">
+            <div class="wrap paddingT50 paddingB50">
+                <h2 class="h2 bold">
+                    딱 맞는 <br>
+                    금융상품 추천해 <br>
+                    드립니다.</h2>
+                <ul class="list">
+                    <li><a href="" class="block current">#저축</a>
+                    </li>
+                    <li><a href="" class="block">#보험</a></li>
+                    <li><a href="" class="block">#대여</a></li>
+                    <li><a href="" class="block">#복지</a></li>
+                </ul>
+                <div class="save jeo">
+                    <h3>저축상품</h3>
+                    <article class="detail">
+                    <a href="" class="block">
+                        <h3 class="h4">저축</h3>
+                        <h4 class="h3 bold">장기저축급여</h4>
+                        <p class="p">한국교직원공제회<br>
+                            금융 · 복지서비스의 시작</p>
+                        <p class="p">연 4.60%</p>
+                    </a>
+                    </article>
+                    <article class="detail">
+                    <a href="" class="block">
+                        <h3 class="h4">저축</h3>
+                        <h4 class="h3 bold">목돈급여</h4>
+                        <p class="p">높은 이자율로<br>
+                            돈 모으는 재미가 쏠쏠</p>
+                        <p class="p">연 4.20%</p>
+                    </a>
+                    </article>
+                    <article class="detail">
+                    <a href="" class="block">
+                        <h3 class="h4">저축</h3>
+                        <h4 class="h3 bold">퇴직생활급여</h4>
+                        <p class="p">은퇴 후 현명한<br>
+                            목돈 관리법 </p>
+                        <p class="p">연4.20% </p>
+                    </a>
+                    </article>
                 </div>
-                </li>
-                <li class="pfAni-4">
-                    <div>
-                        <h3 class="h3">project 4. 브랜드엑스</h3>
-                        <figure>
-                            <img src="img/pf-4.png" alt="브랜드엑스">
-                            <figcaption>작업내용보기</figcaption>
-                        </figure>
-                        <ul class="sub">
-                            <li><strong class="bold">개요</strong>온라인 쇼핑몰 사이트 디자인 및 퍼블리싱</li>
-                            <li><strong class="bold">역할</strong>전체 디자인 및 프론트엔드 퍼블리싱</li>
-                            <li><strong class="bold">사용한 기술</strong>HTML5, CSS3, JavaScript, jQuery, Bootstrap</li>
-                            <li class="work">
-                                <strong class="bold">작업 과정</strong>
-                                <ul>
-                                    <li>아이디어 구상 및 컨셉 설정</li>
-                                    <li>와이어프레임 및 디자인 시안 제작</li>
-                                    <li>HTML/CSS로 레이아웃 구현</li>
-                                    <li>JavaScript/jQuery로 동적 요소 추가</li>
-                                    <li>반응형 디자인 구현</li>
-                                </ul>
-                            </li>
-                            <li><strong class="bold">기여도</strong>80% (디자인, 퍼블리싱 및 테스트)</li>
-                            <li class="flex"><a href="https://github.com/zlzltjddms/pf4/" class="block b-medium rounded border1">깃허브 소스보기</a><a href="https://zlzltjddms.github.io/pf4/" class="block b-medium blue rounded">작품보기</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="pfAni-5">
-                    <div>
-                        <h3 class="h3">project 5. Portfolio Website</h3>
-                        <figure>
-                            <img src="img/pf-5.png" alt="포트폴리오">
-                            <figcaption>작업내용보기</figcaption>
-                        </figure>
-                        <ul class="sub">
-                            <li><strong class="bold">개요</strong>개인 포트폴리오 사이트 디자인 및 퍼블리싱</li>
-                            <li><strong class="bold">역할</strong>전체 디자인 및 프론트엔드 퍼블리싱</li>
-                            <li><strong class="bold">사용한 기술</strong>HTML5, CSS3, JavaScript, React</li>
-                            <li class="work">
-                                <strong class="bold">작업 과정</strong>
-                                <ul>
-                                    <li>컨셉 설정 및 아이디어 스케치</li>
-                                    <li>와이어프레임 및 프로토타입 제작</li>
-                                    <li>React를 사용한 컴포넌트 기반 개발</li>
-                                    <li>CSS3로 스타일링 및 애니메이션 추가</li>
-                                    <li>반응형 디자인 적용</li>
-                                </ul>
-                            </li>
-                            <li><strong class="bold">기여도</strong>100% (단독 프로젝트)</li>
-                            <li class="flex"><a href="https://github.com/zlzltjddms/personal" class="block b-medium rounded border1">깃허브 소스보기</a><a href="https://zlzltjddms.github.io/personal/" class="block  b-medium blue rounded">작품보기</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="pfAni-6">
-                    <div>
-                        <h3 class="h3">project 6. NHN</h3>
-                        <figure>
-                            <img src="img/pf-6.png" alt="NHN">
-                            <figcaption>작업내용보기</figcaption>
-                        </figure>
-                        <ul class="sub">
-                            <li><strong class="bold">개요</strong>블로그 플랫폼 디자인 및 퍼블리싱</li>
-                            <li><strong class="bold">역할</strong>전체 디자인 및 프론트엔드 퍼블리싱</li>
-                            <li><strong class="bold">사용한 기술</strong>HTML5, CSS3, JavaScript, Vue.js</li>
-                            <li class="work">
-                                <strong class="bold">작업 과정</strong>
-                                <ul>
-                                    <li>사용자 요구 분석 및 기능 정의</li>
-                                    <li>와이어프레임 및 초기 디자인 시안 제작</li>
-                                    <li>Vue.js를 사용한 컴포넌트 기반 개발</li>
-                                    <li>CSS3로 스타일링 및 레이아웃 구성</li>
-                                    <li>반응형 디자인 구현</li>
-                                </ul>
-                            </li>
-                            <li><strong class="bold">기여도</strong>90% (디자인, 퍼블리싱 및 테스트)</li>
-                            <li class="flex"><a href="https://github.com/zlzltjddms/nhn" class="block b-medium rounded border1">깃허브 소스보기</a><a href="https://zlzltjddms.github.io/NHN/" class="block  b-medium blue rounded">작품보기</a></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section id="process">
-        <div class="wrap paddingT50 paddingB50 grid">
-            <h2 class="h2 borderT center bold">Learning Archive</h2>
-            <p class="h5">학습 과정에서 생성된 문서, 자료, 산출물을 체계적으로 모아놓았습니다.</p>
-            <h3 class="h4">UI/UX 웹디자인,웹퍼블리셔 5개월 과정[2024.04.02 - 08.22]</h3>
-            <ul class="flex">
-                <li>포토샵(기초)</li>
-                <li>일러스트(기초)</li>
-                <li>프로토타입 기초데이터수집 및 스케치</li>
-                <li>프로토타입 제작 및 사용성 테스트</li>
-                <li>HTML & CSS</li>
-                <li>서비스·경험디자인 관찰조사</li>
-                <li>서비스·경험디자인 시나리오 개발</li>
-                <li>디자인 구성요소 설계</li>
-                <li>디자인 구성요소 제작</li>
-                <li>디자인 구성요소 응용</li>
-                <li>자바스크립트 & 제이쿼리</li>
-                <li>스마트문화앱 UX 설계</li>
-                <li>스마트문화앱 UI 디자인</li>
-                <li>프로젝트 완료 자료정리</li>
-                <li>프로젝트 완료 결과보고서 작성</li>
-                <li>프로젝트 완료 최종보고</li>
-                <li>Vue.js</li>
-                <li>웹영상콘텐츠 후반작업-비NCS실기</li>
-                <li>디지털디자인 사후관리</li>
-            </ul>
-            <a href="#" class="block">Learning Archive 보기</a>
-        </div>
-    </section>
-    <section id="contact">
-        <div class="wrap paddingT50 paddingB50 grid">
-            <h2 class="h2 borderT center bold">Contact</h2>
-            <p class="p15">웹디자인과 웹퍼블리싱 분야에서의 성장을 위해 노력하고 있습니다. <span class="block"></span>궁금한 사항이나 제안이 있으시면 연락 주시기 바랍니다.</p>
-            <ul class="list">
-                <li><strong>이름(Name):</strong> 김성은</li>
-                <li><strong>이메일(Email):</strong> q2q21357@naver.com</li>
-                <li><strong>전화번호(Phone):</strong> 010-5642-0879</li>
-                <li><strong>주소(Address):</strong> 서울특별시 강남구 테헤란로</li>
-            </ul>
-            <a href="https://padlet.com/a01056420879/padlet-tim9od0ztgcldmjx" class="qna" target="_blank">문의사항 보내기</a>
-            <ul class="sns flex">
-                <li><a href="https://open.kakao.com/o/srNopIPg" target="_blank"></a>
-                </li>
-                <li><a href="https://www.instagram.com/castle_silver19" target="_blank"></a>
-                </li>
-                <li><a href="mailto:q2q21357@naver.com"></a>
-                </li>
-            </ul>
-            <div class="sourcesite">
-                <h3 class="h3 bold">My Source Site</h3>
-                <ul class="src flex">
-                    <li><a href="" class="block p15" target="_blank">GDWEB</a></li>
-                    <li><a href="" class="block p15" target="_blank">Pinterest</a></li>
-                    <li><a href="" class="block p15" target="_blank">pixabay</a></li>
-                    <li><a href="" class="block p15" target="_blank">unsplash</a></li>
-                    <li><a href="" class="block p15" target="_blank">구글폰트</a></li>
-                    <li><a href="" class="block p15" target="_blank">Canva</a></li>
-                    <li><a href="" class="block p15" target="_blank">Adobe Color</a></li>
-                    <li><a href="" class="block p15" target="_blank">gliffy</a></li>
+                <div class="save bo">
+                    <h3>보험상품</h3>
+                    <article class="detail">
+                    <a href="" class="block">
+                        <h3 class="h4">보험</h3>
+                        <h4 class="h3 bold">종합공제(2022)</h4>
+                        <p class="p">한국교직원공제회<br>
+                            금융 · 복지서비스의 시작</p>
+                        <p class="p">연 4.60%</p>
+                    </a>
+                    </article>
+                    <article class="detail">
+                    <a href="" class="block">
+                        <h3 class="h4">보험</h3>
+                        <h4 class="h3 bold">더블업종합공제(2022)</h4>
+                        <p class="p">높은 이자율로<br>
+                            돈 모으는 재미가 쏠쏠</p>
+                        <p class="p">연 4.20%</p>
+                    </a>
+                    </article>
+                    <article class="detail">
+                    <a href="" class="block">
+                        <h3 class="h4">보험</h3>
+                        <h4 class="h3 bold">간편가입종합공제(2014)</h4>
+                        <p class="p">은퇴 후 현명한<br>
+                            목돈 관리법 </p>
+                        <p class="p">연4.20% </p>
+                    </a>
+                    </article>
+                </div>
+                <div class="save lental">
+                    <h3>대여상품</h3>
+                    <article class="detail">
+                    <a href="" class="block">
+                        <h3 class="h4">대여</h3>
+                        <h4 class="h3 bold">일반대여</h4>
+                        <p class="p">한국교직원공제회<br>
+                            금융 · 복지서비스의 시작</p>
+                        <p class="p">연 4.60%</p>
+                    </a>
+                    </article>
+                    <article class="detail">
+                    <a href="" class="block">
+                        <h3 class="h4">대여</h3>
+                        <h4 class="h3 bold">분할급여대여</h4>
+                        <p class="p">높은 이자율로<br>
+                            돈 모으는 재미가 쏠쏠</p>
+                        <p class="p">연 4.20%</p>
+                    </a>
+                    </article>
+                    <article class="detail">
+                    <a href="" class="block">
+                        <h3 class="h4">대여</h3>
+                        <h4 class="h3 bold">행복누리 결혼대여</h4>
+                        <p class="p">은퇴 후 현명한<br>
+                            목돈 관리법 </p>
+                        <p class="p">연4.20% </p>
+                    </a>
+                    </article>
+                </div>
+                <div class="save bok">
+                    <h3>복지상품</h3>
+                    <article class="detail">
+                    <a href="" class="block">
+                        <h3 class="h4">복지</h3>
+                        <h4 class="h3 bold">호텔/콘도/리조트</h4>
+                        <p class="p">한국교직원공제회<br>
+                            금융 · 복지서비스의 시작</p>
+                        <p class="p">연 4.60%</p>
+                    </a>
+                    </article>
+                    <article class="detail">
+                    <a href="" class="block">
+                        <h3 class="h4">복지</h3>
+                        <h4 class="h3 bold">결혼 축하금</h4>
+                        <p class="p">높은 이자율로<br>
+                            돈 모으는 재미가 쏠쏠</p>
+                        <p class="p">연 4.20%</p>
+                    </a>
+                    </article>
+                    <article class="detail">
+                    <a href="" class="block">
+                        <h3 class="h4">복지</h3>
+                        <h4 class="h3 bold">출산 축하금</h4>
+                        <p class="p">은퇴 후 현명한<br>
+                            목돈 관리법 </p>
+                        <p class="p">연4.20% </p>
+                    </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!--공제회 이야기-->
+        <section id="story">
+            <div class="wrap">
+                <a href="" class="block paddingT20 paddingB20">
+                    <h2 class="h3 bold">공제회 이야기</h2>
+                    <p class="p">교육가족의 행복을 위한 즐거운 행보</p>
+                </a>
+            </div>
+        </section>
+        <!-- 서비스 -->
+        <section id="service">
+            <div class="wrap paddingT50 paddingB50">
+                <h2 class="h2 bold marginB30">다양한 복지 서비스 혜택을 드립니다.</h2>
+                <div class="wimg serviceAni">
+                    <img src="img/service/1.png" alt="">
+                    <img src="img/service/2.png" alt="">
+                    <img src="img/service/3.png" alt="">
+                    <img src="img/service/4.png" alt="">
+                    <img src="img/service/5.png" alt="">
+                    <img src="img/service/6.png" alt="">
+                    <img src="img/service/7.png" alt="">
+                    <img src="img/service/8.png" alt="">
+                </div>
+                <ul class="serviceAni2">
+                    <li class="s2 a"><a href="" class="block">복지부조</a></li>
+                    <li class="s2 b"><a href="" class="block">상담</a></li>
+                    <li class="s2 c"><a href="" class="block">건강</a></li>
+                    <li class="s2 d"><a href="" class="block">경조</a></li>
+                    <li class="s2 e"><a href="" class="block">교통수단</a></li>
+                    <li class="s2 f"><a href="" class="block">호텔/콘도/리조트</a></li>
+                    <li class="s2 g"><a href="" class="block">레저·스포츠</a></li>
+                    <li class="s2 h"><a href="" class="block">문화 생활</a></li>
                 </ul>
             </div>
+        </section>
+        <!-- 소식 -->
+        <section id="news">
+            <div class="wrap paddingT50 paddingB50">
+                <h2 class="h2 bold marginB30">한국교직원공제회 소식</h2>
+                <ul>
+                    <li>
+                        <a href="" class="block">
+                            법률지원 전문자문역 채용 공고<time>2024-04-24</time>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="block">
+                            기금운용 전문자문역 채용 공고<time>2024-04-24</time>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="block">
+                            2024년도 공제제도 설명서 자료 배포 안내<time>2024-04-24</time>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="rolling">
+            <div>
+              <section class="news-message">
+                <p>China</p>
+                <p>Italy</p>
+                <p>Iran</p>
+                <p>South Korea</p>
+                <p>Spain</p>
+                <p>France</p>
+                <p>Germany</p>
+                <p>United States</p>
+                <p>Switzerland</p>
+            </section>
+             <section class="news-message">
+                <p>China</p>
+                <p>Italy</p>
+                <p>Iran</p>
+                <p>South Korea</p>
+                <p>Spain</p>
+                <p>France</p>
+                <p>Germany</p>
+                <p>United States</p>
+                <p>Switzerland</p>
+            </section>
+            </div>
+        </section>
+    </main>
+    <!-- 어사이드 -->
+    <aside>
+        <div class="login">
+            <h2>로그인</h2>
+            <span><button class="bold current-login">인증서</button><button>아이디</button></span>
+            <div class="in">
+                <p>인증서 로그인을 위해서는 <br>
+                아이디와 비밀번호로 접속하신 후 <br>
+                최초 1회 인증서 등록이 필요합니다.</p>
+                <ul class="in">
+                    <li><a href="">금융인증서</a></li>
+                    <li><a href="">공동인증서</a></li>
+                </ul>
+                <ul class="sns">
+                    <li><a href="">네이버</a></li>
+                    <li><a href="">토스</a></li>
+                    <li><a href="">카카오</a></li>
+                </ul>
+             </div>
+            <div class="id">
+                <form action="">
+                    <input type="text" placeholder="아이디">
+                    <input type="text" placeholder="비번">
+                    <input type="checkbox">
+                    <label for="">마우스 입력</label>
+                    <button>로그인</button>
+                    <button>아이디,비밀번호 찾기</button>
+                </form>
+            </div>
         </div>
-    </section>
-    <!-- 하단영역 -->
-    <footer>
-        <div class="wrap paddingT50 paddingB50 grid">
-            <h1><a href="" class="block">KSE' Portfolio</a></h1>
-            <address class="p15">경기도 안양시 안양동 </address>
-            <ul class="sns flex">
-                <li><a href="" class="block">Notion</a></li>
-                <li><a href="" class="block">GitHub</a></li>
-                <li><a href="" class="block">Google Drive</a></li>
-                <li><a href="" class="block">Codepen</a></li>
+        <div class="fam">
+            <h2 class="hide">자주 사용하는 메뉴</h2>
+            <ul class="list flex">
+                <li><a href="" class="block flex p">장기저축급여 <span class="block"></span> 가입</a></li>
+                <li><a href="" class="block flex p">저축 <span class="block"></span> 급여목록</a></li>
+                <li><a href="" class="block flex p">대여 상환내역 <span class="block"></span> 조회</a></li>
+                <li class="hide"><a href="" class="block flex p">사고보험금 청구</a></li>
+                <li class="hide"><a href="" class="block flex p">제증명서 발급</a></li>
+                <li class="hide"><a href="" class="block flex p">회원카드 발급</a></li>
             </ul>
-            <p class="p15"> 본 페이지는 상업용 목적이 아닌 개인 포트폴리오 용도로 제작되었습니다. <span class="block"></span>
-                Website designed and developed by SeongEun Kim<strong>©2024  All rights reserved.</strong></p>
+        </div>
+        <div class="app flex">
+            <h2 class="hide">한국교직원공제회 모바일 앱</h2>
+            <img src="IMG/main_icon_app_link.png" alt="한국교직원공제회 모바일 앱">
+            <p class="h4 bold">새로운 한국교직원공제회 <span class="block"></span> 모바일 앱을 사용해보세요!</p>
+        </div>
+    </aside>
+    <!--하단영역-->
+    <footer>
+        <div class="wrap paddingT50 paddingB50">
+            <ul class="flex sangdam ">
+                <li class="h4">회원상담 1577-3400</li>
+                <li class="h4">보험가입상담 1577-3993</li>
+            </ul>
+            <ul class="flex sns">
+                <li><a href="" class="block">블로그</a></li>
+                <li><a href="" class="block">네이버</a></li>
+                <li><a href="" class="block">유투브</a></li>
+                <li><a href="" class="block">페이스북</a></li>
+                <li><a href="" class="block">인스타</a></li>
+                <li><a href="" class="block">카카오톡</a></li>
+                <li><a href="" class="block">이메일</a></li>
+                <li><a href="" class="block">매거진</a></li>
+            </ul>
+            <ul class="flex fnb">
+                <li><a href="" class="block h5">서비스헌장</a></li>
+                <li><a href="" class="block h5">회원권리 안내문</a></li>
+                <li><a href="" class="block h5">회원민원 및 불편처리</a></li>
+                <li><a href="" class="block h5 bold">개인정보처리방침</a></li>
+                <li><a href="" class="block h5">이용약관</a></li>
+                <li><a href="" class="block h5">사이트맵</a></li>
+            </ul>
+            <span class="flex block">
+                <select name="" id="" class="block h5">
+                    <option value="">본부 및 지부 안내</option>
+                </select>
+                <select name="" id="" class="block h5">
+                    <option value="">산하사업체안내</option>
+                </select>
+            </span>
+            <address class="flex block p">
+                07328 서울 영등포구 여의나루로 50(여의도동 35-3) The-K한국교직원공제회</address>
+            <p class="p">Copyright©2023 KTCU. ALL RIGHTS RESERVED.</p>
+            <ul class="flex fnb2">
+                <li><a href="" class="block h6">일반신고</a></li>
+                <li><a href="" class="block h6">부패·공익신고</a></li>
+                <li><a href="" class="block h6">ENGLISH</a></li>
+                <li><a href="" class="block h6">대한민국스승상</a></li>
+                <li><a href="" class="block h6 bold yellow">Web-EDI</a></li>
+            </ul>
+            <ul class="flex medal">
+                <li>
+                    <img src="img/mark1.png" alt="소비자중심경영(CCM)인증">
+                    공정거래위원회 주관 <span class="block"></span>  
+                    소비자중심경영(CCM)인증
+                </li>
+                <li>
+                    <img src="img/mark2.png" alt=" 제6회 한국 기금 · 자산운용 대상 최우수상 ">
+                    한국경제신문 주관 <span class="block"></span>
+                    제6회 한국 기금 · 자산운용 대상 최우수상 
+                </li>
+                <li>
+                    <img src="img/mark3.png" alt="제10회 국가지속가능경영대상 수상">
+                    한국지속가능평가원 주관 <span class="block"></span>
+                    제10회 국가지속가능경영대상 수상
+                </li>
+                <li>
+                    <a href="" class="block">
+                        <img src="img/mark4.png" alt="웹접근성품질마크 인증">과학기술정보통신부 주관 <span class="block"></span>
+                        웹접근성품질마크 인증
+                    </a>
+                </li>
+            </ul>
         </div>
     </footer>
 </body>
